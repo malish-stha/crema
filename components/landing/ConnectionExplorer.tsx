@@ -171,13 +171,13 @@ export function ConnectionExplorer() {
       <div className="lg:col-span-8 flex flex-col justify-between bezel-outer p-1 bg-white/2">
         <div className="bezel-inner p-8 flex flex-col h-full justify-between gap-8 bg-[var(--crema-espresso-800)]">
           {/* Animated node connection track */}
-          <div className="flex flex-col sm:flex-row items-center justify-around gap-6 py-8 relative">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-8 relative w-full">
             {activeFlow.steps.map((step, sIdx) => {
               const isLast = sIdx === activeFlow.steps.length - 1;
               return (
-                <div key={sIdx} className="flex items-center w-full sm:w-auto justify-between">
+                <div key={sIdx} className="contents">
                   {/* Module Node Card */}
-                  <div className="node-item bezel-outer p-1 w-full sm:w-48 bg-white/2">
+                  <div className="node-item bezel-outer p-1 w-full sm:w-48 bg-white/2 shrink-0">
                     <div className="bezel-inner p-4 text-center flex flex-col items-center gap-2 bg-[var(--crema-espresso-900)]">
                       <span
                         className="text-2xl"
@@ -200,21 +200,21 @@ export function ConnectionExplorer() {
 
                   {/* Flow Arrow Connector */}
                   {!isLast && (
-                    <div className="hidden sm:flex flex-col items-center justify-center flex-1 min-w-[60px] lg:min-w-[80px] relative px-2">
+                    <div className="hidden sm:flex flex-col items-center justify-center flex-grow relative mx-4 h-0.5 min-w-[50px]">
                       {/* Flow Packet Indicator */}
                       <div
-                        className="packet-indicator absolute w-2 h-2 rounded-full shadow-[0_0_12px_currentColor]"
+                        className="packet-indicator absolute w-2.5 h-2.5 rounded-full -translate-y-1/2 shadow-[0_0_12px_currentColor]"
                         style={{
                           color: step.color,
                           backgroundColor: step.color,
                           left: "10%",
-                          top: "43%",
+                          top: "50%",
                         }}
                       />
                       {/* Connection Line */}
                       <div
-                        className="node-arrow h-0.5 w-full rounded"
-                        style={{ backgroundColor: `oklch(1 0 0 / 12%)` }}
+                        className="node-arrow h-[2px] w-full rounded"
+                        style={{ backgroundColor: `oklch(1 0 0 / 16%)` }}
                       />
                     </div>
                   )}

@@ -36,7 +36,7 @@ const modules = [
     desc: "2.5D isometric view. Real-time table status — free, ordering, occupied. Tap a table to start a QR order session. Owner drag-and-drop edit mode.",
     accent: "oklch(0.70 0.18 160)",     // mint
     icon: "◉",
-    size: "md:col-span-1 md:row-span-2",
+    size: "md:col-span-1 md:row-span-1",
     connects: "Menu · KDS",
     star: true,
   },
@@ -240,7 +240,7 @@ export function FeaturesSection() {
         </div>
 
         {/* 12-card asymmetric bento grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[minmax(200px,auto)] [grid-auto-flow:dense]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[minmax(200px,auto)]">
           {modules.map((mod) => (
             <div
               key={mod.id}
