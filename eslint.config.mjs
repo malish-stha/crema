@@ -12,7 +12,11 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // External agent skills — not our code
+    ".agents/**",
+    "skills-lock.json",
   ]),
+
 ]);
 
 export default eslintConfig;
