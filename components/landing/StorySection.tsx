@@ -18,13 +18,13 @@ const chapters = [
     number: "02",
     label: "The Insight",
     title: "Everything connects. Your tools shouldn't.",
-    body: "An out-of-stock item should vanish from the menu instantly. A bad review should trigger a loyalty coupon. Tip totals should flow into staff payroll automatically. Crema sees the whole organism.",
+    body: "An out-of-stock item vanishes from the menu. A bad review triggers a loyalty coupon. Tip totals flow to staff payroll. Crema connects the whole system.",
   },
   {
     number: "03",
     label: "The Vision",
     title: "Built for the craft, not the spreadsheet",
-    body: "Starting in Nepal, scaling globally. One white-label platform that an independent café owner can brand as their own, give to their baristas, and hand to their customers — all from a single codebase.",
+    body: "Starting in Nepal, scaling to coffee shops worldwide. Brand this white-label platform as your own. Give it to baristas, hand it to customers, and manage operations from one codebase.",
   },
 ];
 

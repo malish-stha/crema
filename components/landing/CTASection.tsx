@@ -94,8 +94,8 @@ export function CTASection() {
         </h2>
 
         <p className="cta-body text-lg text-[var(--crema-cream-300)] max-w-lg mx-auto mb-12 leading-relaxed">
-          Join the waitlist. We&apos;re onboarding independent cafés across Kathmandu,
-          Pokhara, and beyond — one neighbourhood at a time.
+          Join the waitlist. We onboard independent cafés across Kathmandu,
+          Pokhara, and beyond, one neighbourhood at a time.
         </p>
 
         {/* Magnetic CTA button */}

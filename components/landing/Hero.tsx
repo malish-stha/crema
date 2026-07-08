@@ -211,8 +211,8 @@ export function Hero() {
           ref={subRef}
           className="mt-8 text-lg md:text-xl text-[var(--crema-cream-300)] max-w-xl leading-relaxed mx-auto"
         >
-          Orders, baristas, inventory, loyalty, and analytics — all connected.
-          One platform built for the independent café that refuses to be ordinary.
+          We connect your orders, baristas, inventory, loyalty, and analytics.
+          This single platform runs the independent café that refuses to be ordinary.
         </p>
 
         {/* CTA group */}
