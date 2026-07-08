@@ -1,10 +1,34 @@
 import Link from "next/link";
 
-const footerLinks = {
-  Platform: ["Digital Menu", "Barista KDS", "3D Floor Map", "Loyalty CRM", "Analytics"],
-  Company: ["About", "Blog", "Careers", "Contact"],
-  Legal: ["Privacy Policy", "Terms of Service", "Cookie Policy"],
-};
+const footerGroups = [
+  {
+    title: "Platform",
+    links: [
+      { text: "Digital Menu", href: "#" },
+      { text: "Barista KDS", href: "#" },
+      { text: "3D Floor Map", href: "#" },
+      { text: "Loyalty CRM", href: "#" },
+      { text: "Analytics", href: "#" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { text: "About", href: "#" },
+      { text: "Blog", href: "#" },
+      { text: "Careers", href: "#" },
+      { text: "Contact", href: "#" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { text: "Privacy Policy", href: "/privacy" },
+      { text: "Terms of Service", href: "/terms" },
+      { text: "Cookie Policy", href: "/cookies" },
+    ],
+  },
+];
 
 export function Footer() {
   return (
@@ -41,20 +65,20 @@ export function Footer() {
           </div>
 
           {/* Link columns */}
-          {Object.entries(footerLinks).map(([group, links]) => (
-            <div key={group}>
+          {footerGroups.map((group) => (
+            <div key={group.title}>
               <h3 className="font-mono-code text-[10px] uppercase tracking-[0.2em] text-[var(--crema-cream-300)] mb-5">
-                {group}
+                {group.title}
               </h3>
               <ul className="space-y-3" role="list">
-                {links.map((link) => (
-                  <li key={link} role="listitem">
-                    <a
-                      href="#"
+                {group.links.map((link) => (
+                  <li key={link.text} role="listitem">
+                    <Link
+                      href={link.href}
                       className="text-sm text-[var(--crema-cream-300)] hover:text-[var(--crema-cream-100)] transition-colors duration-200"
                     >
-                      {link}
-                    </a>
+                      {link.text}
+                    </Link>
                   </li>
                 ))}
               </ul>

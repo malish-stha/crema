@@ -1,7 +1,8 @@
 import { Nav } from "@/components/landing/Nav";
 import { Hero } from "@/components/landing/Hero";
 import { StorySection } from "@/components/landing/StorySection";
-import { FeaturesSection } from "@/components/landing/FeaturesSection";
+// import { FeaturesSection } from "@/components/landing/FeaturesSection";
+import { FeaturesScroll } from "@/components/landing/FeaturesScroll";
 import { MenuPreview } from "@/components/landing/MenuPreview";
 import { StatsSection } from "@/components/landing/StatsSection";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
@@ -14,7 +15,8 @@ export default function Home() {
       <Nav />
       <Hero />
       <StorySection />
-      <FeaturesSection />
+      {/* <FeaturesSection /> */}
+      <FeaturesScroll />
       <MenuPreview />
       <StatsSection />
       <TestimonialsSection />
