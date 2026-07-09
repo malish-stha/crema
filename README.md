@@ -4,6 +4,8 @@
 
 🌐 **[Try the Live Demo](https://brew-ruddy-omega.vercel.app/)** — Explore the customer ordering view, barista KDS dashboard, and live analytics.
 
+![Crema Hero Showcase](public/hero.png)
+
 Crema (BrewOS) is a comprehensive café management platform built as a modern, high-performance web application. Designed to be white-labeled, each tenant receives a fully branded interface scoped to their unique `cafeId`.
 
 ---
