@@ -105,6 +105,14 @@ export function Nav() {
                   {link.label}
                 </Link>
               ))}
+              <a
+                href="https://brew-ruddy-omega.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-1.5 rounded-full text-sm text-[var(--crema-cream-300)] hover:text-[var(--crema-cream-100)] transition-colors duration-300 hover:bg-white/5 flex items-center gap-1"
+              >
+                Live Demo <span className="text-[10px] opacity-75">↗</span>
+              </a>
             </div>
 
             {/* CTA */}
@@ -167,6 +175,15 @@ export function Nav() {
               {link.label}
             </a>
           ))}
+          <a
+            href="https://brew-ruddy-omega.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="mobile-link font-display text-4xl font-bold text-[var(--crema-cream-100)] hover:text-[var(--crema-terracotta)] transition-colors duration-200"
+          >
+            Live Demo ↗
+          </a>
           <a
             href="#features"
             onClick={() => setOpen(false)}

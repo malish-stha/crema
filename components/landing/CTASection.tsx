@@ -98,36 +98,52 @@ export function CTASection() {
           Pokhara, and beyond, one neighbourhood at a time.
         </p>
 
-        {/* Magnetic CTA button */}
-        <a
-          ref={btnRef}
-          href="#"
-          className="cta-btn group inline-flex items-center gap-4 px-8 py-5 rounded-full bg-[var(--crema-terracotta)] text-[var(--crema-cream-100)] font-medium text-lg will-change-transform"
-          style={{
-            transition: "background-color 350ms cubic-bezier(0.32,0.72,0,1)",
-            boxShadow: "0 0 0 1px oklch(1 0 0 / 8%), 0 8px 32px oklch(0.62 0.14 50 / 30%)",
-          }}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "var(--crema-terracotta-l)";
-          }}
-          onMouseOut={(e) => {
-            (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "var(--crema-terracotta)";
-          }}
-          aria-label="Join the early access waitlist"
-        >
-          Join the Waitlist
-          {/* Button-in-button trailing icon */}
-          <span
-            className="w-9 h-9 rounded-full bg-black/20 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-px"
-            aria-hidden="true"
+        {/* CTA Button Group */}
+        <div className="cta-btn mt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            ref={btnRef}
+            href="#"
+            className="group inline-flex items-center gap-4 px-8 py-5 rounded-full bg-[var(--crema-terracotta)] text-[var(--crema-cream-100)] font-medium text-lg will-change-transform"
+            style={{
+              transition: "background-color 350ms cubic-bezier(0.32,0.72,0,1)",
+              boxShadow: "0 0 0 1px oklch(1 0 0 / 8%), 0 8px 32px oklch(0.62 0.14 50 / 30%)",
+            }}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "var(--crema-terracotta-l)";
+            }}
+            onMouseOut={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "var(--crema-terracotta)";
+            }}
+            aria-label="Join the early access waitlist"
           >
-            →
-          </span>
-        </a>
+            Join the Waitlist
+            <span
+              className="w-9 h-9 rounded-full bg-black/20 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-px"
+              aria-hidden="true"
+            >
+              →
+            </span>
+          </a>
 
-        <p className="mt-6 font-mono-code text-[10px] uppercase tracking-[0.2em] text-[var(--crema-cream-300)] opacity-50">
+          <a
+            href="https://brew-ruddy-omega.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 px-8 py-5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm text-[var(--crema-cream-100)] font-medium text-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 active:scale-[0.97]"
+            style={{
+              boxShadow: "0 8px 32px oklch(0 0 0 / 20%)",
+            }}
+          >
+            Try the Live Demo
+            <span className="text-sm opacity-60 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+              ↗
+            </span>
+          </a>
+        </div>
+
+        <p className="mt-8 font-mono-code text-[10px] uppercase tracking-[0.2em] text-[var(--crema-cream-300)] opacity-50">
           No credit card · Cancel any time
         </p>
       </div>

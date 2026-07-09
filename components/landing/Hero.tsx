@@ -14,7 +14,7 @@ export function Hero() {
   const line2Ref = useRef<HTMLDivElement>(null);
   const subRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
-  const badgeRef = useRef<HTMLDivElement>(null);
+  const badgeRef = useRef<HTMLAnchorElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -186,13 +186,19 @@ export function Hero() {
       {/* Hero content */}
       <div className="hero-text-block relative z-10 flex flex-col items-center text-center px-6 max-w-5xl mx-auto">
         {/* Eyebrow badge */}
-        <div ref={badgeRef} className="eyebrow-badge mb-10">
+        <a
+          href="https://brew-ruddy-omega.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ref={badgeRef}
+          className="eyebrow-badge mb-10 group hover:border-[var(--crema-terracotta)] hover:bg-white/5 transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
+        >
           <span
-            className="w-1.5 h-1.5 rounded-full bg-[var(--crema-terracotta)] inline-block"
+            className="w-1.5 h-1.5 rounded-full bg-[var(--crema-terracotta)] inline-block animate-pulse"
             aria-hidden="true"
           />
-          Now in early access · Nepal &amp; beyond
-        </div>
+          Try the Live Demo ↗
+        </a>
 
         {/* Display headline — split into word-inner for mask reveal */}
         <h1 className="font-display" aria-label="The OS Behind Great Coffee">
@@ -216,7 +222,7 @@ export function Hero() {
         </p>
 
         {/* CTA group */}
-        <div ref={ctaRef} className="mt-10 flex flex-col sm:flex-row items-center gap-4">
+        <div ref={ctaRef} className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#features"
             className="group flex items-center gap-3 px-7 py-4 rounded-full bg-[var(--crema-terracotta)] text-[var(--crema-cream-100)] font-medium text-base"
@@ -235,6 +241,19 @@ export function Hero() {
               →
             </span>
           </a>
+
+          <a
+            href="https://brew-ruddy-omega.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2 px-6 py-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm text-[var(--crema-cream-100)] font-medium text-base hover:bg-white/10 hover:border-white/20 transition-all duration-300 active:scale-[0.97]"
+          >
+            Try Live Demo
+            <span className="text-xs opacity-60 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
+              ↗
+            </span>
+          </a>
+
           <a
             href="#story"
             className="px-6 py-3.5 text-[var(--crema-cream-300)] text-sm hover:text-[var(--crema-cream-100)] transition-colors duration-200 underline underline-offset-4 decoration-white/20"
